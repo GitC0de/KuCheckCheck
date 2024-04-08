@@ -123,6 +123,9 @@ function settings(title) {
 
 function restart() {
     const startButton = document.querySelector(".startButton");
+    const point = document.getElementById("question");
+    point.innerHTML = "";
+    
     startButton.style.display = "block";
     nextButton.style.display = "none";
     settings(title);
@@ -263,6 +266,7 @@ function showScore() {
     resetState();
     const title = document.querySelector("h1");
     title.innerHTML = "당신의 결과";
+
 
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "메인으로";
